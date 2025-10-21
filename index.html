@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatGPT</title>
+    <link rel="icon" type="image/png" href="catai.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -62,8 +63,8 @@
     <div id="typing-indicator-container" class="hidden px-4 md:px-6 pb-4">
          <div class="max-w-2xl mx-auto flex items-end gap-3">
             <div class="flex-shrink-0">
-                <!-- Cat Avatar SVG -->
-                <svg class="h-8 w-8 text-white bg-green-600 p-1 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.968 2.073c.183 0 .366.003.548.01a8.998 8.998 0 0 1 8.41 8.41c.007.182.01.365.01.548 0 .183-.003.366-.01.548a8.998 8.998 0 0 1-8.41 8.41c-.182.007-.365.01-.548.01-.183 0-.366-.003-.548-.01a8.998 8.998 0 0 1-8.41-8.41c-.007-.182-.01-.365-.01-.548 0-.183.003-.366.01-.548A8.998 8.998 0 0 1 11.42 2.083c.182-.007.365-.01.548-.01Zm0 1.5a7.5 7.5 0 0 0-7.045 7.045c-.006.152-.009.305-.009.458s.003.306.009.458A7.5 7.5 0 0 0 11.968 19.5c.153 0 .306-.003.458-.009A7.5 7.5 0 0 0 19.5 12.42c.006-.152.009-.305.009-.458s-.003-.306-.009-.458A7.5 7.5 0 0 0 12.425 4.455a7.433 7.433 0 0 0-.457-.009ZM8.5 12c.828 0 1.5-.672 1.5-1.5S9.328 9 8.5 9 7 9.672 7 10.5 7.672 12 8.5 12Zm7 0c.828 0 1.5-.672 1.5-1.5S16.328 9 15.5 9s-1.5.672-1.5 1.5.672 1.5 1.5 1.5Zm-3.499 2.25c-.276 0-.5.224-.5.5s.224.5.5.5h.001a.5.5 0 0 0 .499-.5v-.5h-.5Zm0-1.5c.275 0 .5-.225.5-.5v-1c0-.275-.225-.5-.5-.5s-.5.225-.5.5v1c0 .275.225.5.5.5Zm-1 1.5c-.276 0-.5.224-.5.5s.224.5.5.5h.001a.5.5 0 0 0 .499-.5v-.5h-.5Zm2 0c-.276 0-.5.224-.5.5s.224.5.5.5a.5.5 0 0 0 .5-.5c0-.276-.224-.5-.5-.5Z"/></svg>
+                <!-- Cat Avatar Image -->
+                <img src="catai.png" alt="Cat Avatar" class="h-8 w-8 rounded-full">
             </div>
             <div class="bg-gray-700 rounded-lg p-3">
                 <div class="typing-indicator">
@@ -124,7 +125,7 @@
                 <div class="max-w-2xl mx-auto flex items-end gap-3 ${sender === 'user' ? 'flex-row-reverse' : ''}">
                     ${sender === 'cat' ? `
                     <div class="flex-shrink-0">
-                        <svg class="h-8 w-8 text-white bg-green-600 p-1 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.968 2.073c.183 0 .366.003.548.01a8.998 8.998 0 0 1 8.41 8.41c.007.182.01.365.01.548 0 .183-.003.366-.01.548a8.998 8.998 0 0 1-8.41 8.41c-.182.007-.365.01-.548.01-.183 0-.366-.003-.548-.01a8.998 8.998 0 0 1-8.41-8.41c-.007-.182-.01-.365-.01-.548 0-.183.003-.366.01-.548A8.998 8.998 0 0 1 11.42 2.083c.182-.007.365-.01.548-.01Zm0 1.5a7.5 7.5 0 0 0-7.045 7.045c-.006.152-.009.305-.009.458s.003.306.009.458A7.5 7.5 0 0 0 11.968 19.5c.153 0 .306-.003.458-.009A7.5 7.5 0 0 0 19.5 12.42c.006-.152.009-.305.009-.458s-.003-.306-.009-.458A7.5 7.5 0 0 0 12.425 4.455a7.433 7.433 0 0 0-.457-.009ZM8.5 12c.828 0 1.5-.672 1.5-1.5S9.328 9 8.5 9 7 9.672 7 10.5 7.672 12 8.5 12Zm7 0c.828 0 1.5-.672 1.5-1.5S16.328 9 15.5 9s-1.5.672-1.5 1.5.672 1.5 1.5 1.5Zm-3.499 2.25c-.276 0-.5.224-.5.5s.224.5.5.5h.001a.5.5 0 0 0 .499-.5v-.5h-.5Zm0-1.5c.275 0 .5-.225.5-.5v-1c0-.275-.225-.5-.5-.5s-.5.225-.5.5v1c0 .275.225.5.5.5Zm-1 1.5c-.276 0-.5.224-.5.5s.224.5.5.5h.001a.5.5 0 0 0 .499-.5v-.5h-.5Zm2 0c-.276 0-.5.224-.5.5s.224.5.5.5a.5.5 0 0 0 .5-.5c0-.276-.224-.5-.5-.5Z"/></svg>
+                        <img src="catai.png" alt="Cat Avatar" class="h-8 w-8 rounded-full">
                     </div>` : ''}
                     <div class="max-w-xs md:max-w-md rounded-lg p-3 ${sender === 'user' ? 'bg-green-600' : 'bg-gray-700'}">
                         <p class="text-white">${message}</p>
@@ -178,3 +179,5 @@
     </script>
 </body>
 </html>
+
+
